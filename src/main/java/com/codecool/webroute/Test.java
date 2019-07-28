@@ -30,7 +30,6 @@ public class Test {
                     if (t.getHttpContext().getPath().equals("/" + method.getName())) {
                         Routes routesInstance = new Routes();
                         try {
-
                             String response = (String) method.invoke(routesInstance);
                             t.sendResponseHeaders(200, response.length());
                             OutputStream os = t.getResponseBody();
